@@ -1,0 +1,160 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/*see how whole page is getting aligned 
+*{
+    outline: 2px solid red;
+}
+*/
+
+
+/* Center overall_container to webpage*/
+.center-overall_container{
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+Contain all other containers (Parent)
+    1.Make it flex
+    2.Add green border
+    3.Add lightgreen background color
+    4.center of webite
+    5.make it big (not sure size yet)
+*/
+.overall_container{
+    display: flex;
+    border: 5px solid green;
+    background-color: #d1ffbd;
+    height: 800px;
+    width: 1000px;
+    box-sizing: border-box;
+    flex-direction: column; /* Added so we stack boxes top to bottom (for blue boxes)*/
+}
+
+/*
+Top container inside overall container
+    1.flex for 3 other boxes
+    2.border blue;
+    3.background color lightblue;
+    4.margin to separate from overall container div
+    5.keep size, so add box-sizing so added content will not change its dimensions
+*/
+.top_container{
+    display: flex;
+    border: 5px solid blue;
+    background-color: lightblue;
+    height: 150px;
+    width: 950px;
+    margin: 20px;
+    box-sizing: border-box;
+    align-items: center; /* Aligns the 3 boxes below to center of this container*/
+}
+
+/* 
+3 Boxes inside top container 
+*/
+.first_box, .second_box, .third_box{
+    display: flex; /* Will do for all 3 (just so i dont have to make exception for second_box)*/
+    background-color: peachpuff;
+    border: 5px solid darkorange;
+    height: 100px;
+    flex: 1; /* So that every div takes equal space */
+    margin: 20px;
+    box-sizing: border-box;/* so box size stays same for all box when adding content (only content size will end up changing)*/
+}
+
+/*
+    display flex already added from above
+    center items
+    add padding space for content (first_item & second_item)
+*/
+.second_box{
+    align-items: center;
+    padding: 10px;
+}
+
+
+/*
+2 boxes inside second_box in top_container
+*/
+.first_item, .second_item{
+    border: 5px solid red;
+    background-color: lightcoral;
+    height: 70px;
+    flex: 1;
+}
+
+
+.middle_container{
+    display: flex;
+    /*border: 5px solid blue; */   /* Removed border since the first_half and second_half include it */
+    /*background-color: lightblue; */  /* deleted so that it we have a "clear" background */
+    height: 400px;
+    width: 950px;
+    margin: 20px;
+    /*box-sizing: border-box; */
+    align-items: center; /* Aligns the 2 boxes below to center of overall_container */
+}
+
+/* solid block (no display flex bc we not doing anything in it)*/
+.first_half{
+    border: 5px solid red;
+    background-color: lightcoral;
+    height: 400px;
+    width: 950px;
+}
+
+/* 
+solid block container that will have blocks that stack on top of each other 
+
+I assigned borders for the second half into separate boxes (divs).
+The reason is so that we dont get a border in the middle, where we margined the bottom_box from the top_box
+
+*/
+.second_half{
+    display: flex;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    height: 400px;
+    width: 950px;
+    margin-left: 40px;
+    flex-direction: column;  /* changes direction of div contents (so that its not a row but now a column. so that they can stack)*/
+}
+
+.top_box, .bottom_box{
+    background-color: lightcoral;
+    height: 160px;
+}
+
+
+.top_box{
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+    border-bottom: 5px solid red;
+}
+
+.bottom_box{
+    margin-top: 80px; /* creates middle separation between blocks*/
+    border-top: 5px solid red;
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+}
+
+
+
+
+
+.bottom_container{
+    display: flex;
+    border: 5px solid blue;
+    background-color: lightblue;
+    height: 150px;
+    width: 950px;
+    margin: 20px;
+    box-sizing: border-box;
+    align-items: center; /* Aligns the 3 boxes below to center of this container*/
+}

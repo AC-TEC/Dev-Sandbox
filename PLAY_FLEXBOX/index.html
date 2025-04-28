@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox playground</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+    <h1>Flexbox Playground</h1>
+
+    <div class="center-overall_container">
+        <!-- Will container all the other boxes -->
+        <div class="overall_container">
+            <!-- Top section -->
+            <div class="top_container">
+                <!-- 3 divs inside top container -->
+                <div class="first_box"></div>
+                <!-- Will contain two more boxes, so we will have to flex second_box div-->
+                <div class="second_box">
+                    <div class="first_item"></div>
+                    <div class="second_item"></div>
+                </div>
+                <div class="third_box"></div>
+            </div>
+
+            <!-- Middle section -->
+            <div class="middle_container">
+                <div class="first_half"></div>
+                
+                <!-- will contain two more boxes (will be vertically stacked instead of next to each other)-->
+                <div class="second_half">
+                    <div class="top_box"></div>
+                    <div class="bottom_box"></div>
+                </div>
+            </div>
+
+            <!-- Bottom section -->
+            <div class="bottom_container"></div>
+            
+            
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
